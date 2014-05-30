@@ -23,7 +23,8 @@ app.use(function *(next){
 
 app.use(function *(next){
   console.log("4A")
-  this.body = "--"
+  // JSON
+  this.body = {message:"ACK"}
   yield next
   console.log("4B")
 });
