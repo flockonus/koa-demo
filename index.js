@@ -2,6 +2,9 @@ var koa = require('koa');
 var app = koa();
 var PORT = 3000
 
+var KoaRender = require('koa-render')
+app.use(KoaRender('./views', 'jade'))
+
 app.use(function *(next){
   console.log("\n\n\n\n\n\n")
   console.log("1A")
@@ -23,8 +26,8 @@ app.use(function *(next){
 
 app.use(function *(next){
   console.log("4A")
-  // JSON
-  this.body = {message:"ACK"}
+  // jade/html
+  this.body = yield this.render('index');
   yield next
   console.log("4B")
 });

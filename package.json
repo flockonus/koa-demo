@@ -13,6 +13,8 @@
   "author": "Fabiano P Soriani <fabianosoriani@gmail.com> (https://github.com/flockonus)",
   "license": "tbd",
   "dependencies": {
-    "koa": "~0.6.1"
+    "koa": "~0.6.1",
+    "koa-render": "~0.2.1",
+    "then-jade": "~2.0.0"
   }
 }
